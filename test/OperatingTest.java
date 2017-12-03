@@ -22,5 +22,21 @@ public class OperatingTest {
                 new int[]{0,0,0,2}));
     }
 
+    @Test
+    public void multiplication_tests() {
+        assertArrayEquals(new int[]{0,0,0,2,4}, Operating.multiply(3,4,new int[]{1,0,1},
+                new int[]{0,0,0,2}, new int[]{1,2}));
+        assertArrayEquals(new int[]{0,0,4,0,0,0,9,0,0,0,5}, Operating.multiply(7,7,new int[]{1,0,1},
+                new int[]{0,0,4,0,0,0,5}, new int[]{1,0,0,0,1}));
+    }
+
+    @Test
+    public void division_tests () {
+        assertArrayEquals(null, Operating.divide(2,4,new int[]{1,1,1}, new int[]{1,0,1,1}));
+        assertArrayEquals(new int[]{1,1}, Operating.divide(2,4,new int[]{1,1,1,1}, new int[]{1,0,1}));
+        assertArrayEquals(new int[]{0,0,0,0,1}, Operating.divide(2,6,new int[]{1,0,0,0,0,1}, new int[]{0,1}));
+        assertArrayEquals(new int[]{2,2}, Operating.divide(7,3,new int[]{-2,6,2}, new int[]{2,1}));
+    }
+
 
 }
