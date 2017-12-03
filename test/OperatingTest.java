@@ -38,5 +38,4 @@ public class OperatingTest {
         assertArrayEquals(new int[]{2,2}, Operating.divide(7,3,new int[]{-2,6,2}, new int[]{2,1}));
     }
 
-
 }

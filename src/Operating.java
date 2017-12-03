@@ -121,6 +121,7 @@ public class Operating {
 
     private static int[] removeZeros (int[] arr) {
         if (arr[arr.length-1] != 0) return arr;
+
         for (int i = arr.length-1; i >= 0 ; i--) {
             if (arr[i] != 0) {
                 int[] r = new int[i+1];
